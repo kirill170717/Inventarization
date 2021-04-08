@@ -59,45 +59,35 @@ namespace Инвентаризация
 
         private void Button_Auth_Click(object sender, RoutedEventArgs e)
         {
+            string Login = Convert.ToString(tb_Login);
+            string Password = Convert.ToString(tb_Password);
+            InventarizationEntities inventarization = new InventarizationEntities();
+            Invent_Users invent_Users = inventarization.Invent_Users.FirstOrDefault(i => i.Login == Login);
             if (tb_Login == null || tb_Password == null)
             {
-                MessageBox.Show("Ключевые поля не заполнены");
+                MessageBox.Show("Ключевые поля не заполнены", "Ошибка");
             }
-            //else if (kurs_User != null)
-            //{
-            //    if (kurs_User.Логин == TxtLogin && kurs_User.Пароль == PasPassword)
-            //    {
-            //        if (kurs_User.RoleId == 1)
-            //        {
-            //            ок_ад.Show();
-            //        }
-            //        else if (kurs_User.RoleId == 2)
-            //        {
-            //            Idd.TrainerI = db.Kurs_Trainer.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).IdTrainer;
-            //            ок_тр.Show();
-            //        }
-            //        else if (kurs_User.RoleId == 3)
-            //        {
-            //            Idd.ClientI = db.Kurs_Client.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).IdClient;
-            //            Idd.UnitI = db.Kurs_Client.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).UnitId;
-            //            if (Idd.UnitI == 1)
-            //            {
-            //                выбор_Тренера.Show();
-            //            }
-            //            else
-            //            {
-            //                автКлиент.Show();
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Неверный логин или пароль");
-            //    }
-            //}
+            else if (invent_Users != null) 
+            {
+                if (invent_Users.Login == Login && invent_Users.Password == Password)
+                {
+                    if (invent_Users.Login == "Director")
+                    {
+                        
+                    }
+                    else if (invent_Users.Login == "Admin")
+                    {
+                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка");
+                }
+            }
             else
             {
-                MessageBox.Show("Пользователя с таким логином не существует");
+                MessageBox.Show("Пользователя с таким логином не существует", "Ошибка");
             }
         }
     }
