@@ -60,5 +60,23 @@ namespace Инвентаризация
         {
 
         }
+
+        private void Room_1_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Room_Win_1 room_Win_1 = new Room_Win_1();
+            room_Win_1.Show();
+        }
+
+        private void Room_2_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Room_Win_2 room_Win_2 = new Room_Win_2();
+            room_Win_2.Show();
+        }
+
+        private void Room_3_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Room_Win_3 room_Win_3 = new Room_Win_3();
+            room_Win_3.Show();
+        }
     }
 }

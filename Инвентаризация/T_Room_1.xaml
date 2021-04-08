@@ -228,7 +228,7 @@
             </Button>
             <TextBox x:Name="tb_Name" Style="{StaticResource TB}" Margin="119,117,561,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
-                Margin="130,133,561,0" VerticalAlignment="Top" Foreground="White">
+                Margin="130,129,561,0" VerticalAlignment="Top" Foreground="White" Height="23">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -242,7 +242,7 @@
             </TextBlock>
             <TextBox x:Name="tb_Num_Inv" Style="{StaticResource TB}" Margin="119,170,561,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Инв. Номер"
-                Margin="130,186,593,0" VerticalAlignment="Top" Foreground="White">
+                Margin="130,180,579,0" VerticalAlignment="Top" Foreground="White" Height="25">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -256,7 +256,7 @@
             </TextBlock>
             <TextBox x:Name="tb_Date" Style="{StaticResource TB}" Margin="119,226,561,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Дата"
-                Margin="130,242,593,0" VerticalAlignment="Top" Foreground="White">
+                Margin="130,237,593,0" VerticalAlignment="Top" Foreground="White" Height="24">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Visibility" Value="Collapsed"/>
