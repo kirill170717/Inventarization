@@ -63,7 +63,8 @@ namespace Инвентаризация
 
         private void Button_Redact_Click(object sender, RoutedEventArgs e)
         {
-
+            T_Room_3 t_Room_3 = new T_Room_3();
+            t_Room_3.Show();
         }
     }
 }
