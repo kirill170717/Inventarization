@@ -191,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Inventarization" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="InventarizationEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Invent_Users" EntityType="Self.Invent_Users" />
           <EntitySet Name="InventFirstRooms" EntityType="Self.InventFirstRoom" />
           <EntitySet Name="InventNames" EntityType="Self.InventName" />
@@ -215,7 +215,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище InventarizationModelContainer" CdmEntityContainer="Inventarization">
+        <EntityContainerMapping StorageEntityContainer="Хранилище InventarizationModelContainer" CdmEntityContainer="InventarizationEntities">
           <EntitySetMapping Name="Invent_Users">
             <EntityTypeMapping TypeName="InventarizationModel.Invent_Users">
               <MappingFragment StoreEntitySet="Invent_Users">

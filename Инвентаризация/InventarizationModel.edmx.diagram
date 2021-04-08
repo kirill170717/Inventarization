@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2be24f53d3c34994b6b6f8334283cd9c" Name="Diagram1">
+      <Diagram DiagramId="4618b62e47034469877cc280672c5e99" Name="Diagram1">
         <EntityTypeShape EntityType="InventarizationModel.Invent_Users" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="InventarizationModel.InventFirstRoom" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="InventarizationModel.InventName" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />

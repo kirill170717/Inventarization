@@ -13,10 +13,10 @@ namespace Инвентаризация
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Inventarization : DbContext
+    public partial class InventarizationEntities : DbContext
     {
-        public Inventarization()
-            : base("name=Inventarization")
+        public InventarizationEntities()
+            : base("name=InventarizationEntities")
         {
         }
     

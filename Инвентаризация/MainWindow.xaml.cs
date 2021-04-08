@@ -59,7 +59,46 @@ namespace Инвентаризация
 
         private void Button_Auth_Click(object sender, RoutedEventArgs e)
         {
-
+            if (tb_Login == null || tb_Password == null)
+            {
+                MessageBox.Show("Ключевые поля не заполнены");
+            }
+            //else if (kurs_User != null)
+            //{
+            //    if (kurs_User.Логин == TxtLogin && kurs_User.Пароль == PasPassword)
+            //    {
+            //        if (kurs_User.RoleId == 1)
+            //        {
+            //            ок_ад.Show();
+            //        }
+            //        else if (kurs_User.RoleId == 2)
+            //        {
+            //            Idd.TrainerI = db.Kurs_Trainer.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).IdTrainer;
+            //            ок_тр.Show();
+            //        }
+            //        else if (kurs_User.RoleId == 3)
+            //        {
+            //            Idd.ClientI = db.Kurs_Client.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).IdClient;
+            //            Idd.UnitI = db.Kurs_Client.FirstOrDefault(i => i.Kurs_User.Логин == TxtLogin).UnitId;
+            //            if (Idd.UnitI == 1)
+            //            {
+            //                выбор_Тренера.Show();
+            //            }
+            //            else
+            //            {
+            //                автКлиент.Show();
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Неверный логин или пароль");
+            //    }
+            //}
+            else
+            {
+                MessageBox.Show("Пользователя с таким логином не существует");
+            }
         }
     }
 }
