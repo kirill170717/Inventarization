@@ -87,6 +87,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Room_Win_1.xaml.cs">
+      <DependentUpon>Room_Win_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Room_Win_2.xaml.cs">
+      <DependentUpon>Room_Win_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Room_Win_3.xaml.cs">
+      <DependentUpon>Room_Win_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Selecting_Rooms_Win.xaml.cs">
+      <DependentUpon>Selecting_Rooms_Win.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="T_Room_1.xaml.cs">
+      <DependentUpon>T_Room_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="T_Room_2.xaml.cs">
+      <DependentUpon>T_Room_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="T_Room_3.xaml.cs">
+      <DependentUpon>T_Room_3.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,6 +150,34 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Room_Win_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Room_Win_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Room_Win_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Selecting_Rooms_Win.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="T_Room_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="T_Room_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="T_Room_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -202,6 +251,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Inventarization.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\123.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
