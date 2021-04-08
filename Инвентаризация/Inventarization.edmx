@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище InventarizationModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Invent_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InventFirstRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="int" Nullable="false" />
+          <Property Name="InventNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InventNames">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InventSecondRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="int" Nullable="false" />
+          <Property Name="InventNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InventThirdRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="int" Nullable="false" />
+          <Property Name="InventNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_InventFirstRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventNames" Multiplicity="1" />
+          <End Role="InventFirstRoom" Type="Self.InventFirstRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventFirstRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventSecondRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventNames" Multiplicity="1" />
+          <End Role="InventSecondRoom" Type="Self.InventSecondRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventSecondRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventThirdRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventNames" Multiplicity="1" />
+          <End Role="InventThirdRoom" Type="Self.InventThirdRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventThirdRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище InventarizationModelContainer">
+          <EntitySet Name="Invent_Users" EntityType="Self.Invent_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventFirstRoom" EntityType="Self.InventFirstRoom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventNames" EntityType="Self.InventNames" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventSecondRoom" EntityType="Self.InventSecondRoom" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InventThirdRoom" EntityType="Self.InventThirdRoom" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_InventFirstRoom_ToTable" Association="Self.FK_InventFirstRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventFirstRoom" EntitySet="InventFirstRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventSecondRoom_ToTable" Association="Self.FK_InventSecondRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventSecondRoom" EntitySet="InventSecondRoom" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventThirdRoom_ToTable" Association="Self.FK_InventThirdRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventThirdRoom" EntitySet="InventThirdRoom" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InventarizationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Invent_Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InventFirstRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="Int32" Nullable="false" />
+          <Property Name="InventNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="InventName" Relationship="Self.FK_InventFirstRoom_ToTable" FromRole="InventFirstRoom" ToRole="InventNames" />
+        </EntityType>
+        <EntityType Name="InventName">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="InventFirstRooms" Relationship="Self.FK_InventFirstRoom_ToTable" FromRole="InventNames" ToRole="InventFirstRoom" />
+          <NavigationProperty Name="InventSecondRooms" Relationship="Self.FK_InventSecondRoom_ToTable" FromRole="InventNames" ToRole="InventSecondRoom" />
+          <NavigationProperty Name="InventThirdRooms" Relationship="Self.FK_InventThirdRoom_ToTable" FromRole="InventNames" ToRole="InventThirdRoom" />
+        </EntityType>
+        <EntityType Name="InventSecondRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="Int32" Nullable="false" />
+          <Property Name="InventNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="InventName" Relationship="Self.FK_InventSecondRoom_ToTable" FromRole="InventSecondRoom" ToRole="InventNames" />
+        </EntityType>
+        <EntityType Name="InventThirdRoom">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="Int32" Nullable="false" />
+          <Property Name="InventNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="InventName" Relationship="Self.FK_InventThirdRoom_ToTable" FromRole="InventThirdRoom" ToRole="InventNames" />
+        </EntityType>
+        <Association Name="FK_InventFirstRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventName" Multiplicity="1" />
+          <End Role="InventFirstRoom" Type="Self.InventFirstRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventFirstRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventSecondRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventName" Multiplicity="1" />
+          <End Role="InventSecondRoom" Type="Self.InventSecondRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventSecondRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventThirdRoom_ToTable">
+          <End Role="InventNames" Type="Self.InventName" Multiplicity="1" />
+          <End Role="InventThirdRoom" Type="Self.InventThirdRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventNames">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InventThirdRoom">
+              <PropertyRef Name="Name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Inventarization" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Invent_Users" EntityType="Self.Invent_Users" />
+          <EntitySet Name="InventFirstRooms" EntityType="Self.InventFirstRoom" />
+          <EntitySet Name="InventNames" EntityType="Self.InventName" />
+          <EntitySet Name="InventSecondRooms" EntityType="Self.InventSecondRoom" />
+          <EntitySet Name="InventThirdRooms" EntityType="Self.InventThirdRoom" />
+          <AssociationSet Name="FK_InventFirstRoom_ToTable" Association="Self.FK_InventFirstRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventFirstRoom" EntitySet="InventFirstRooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventSecondRoom_ToTable" Association="Self.FK_InventSecondRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventSecondRoom" EntitySet="InventSecondRooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventThirdRoom_ToTable" Association="Self.FK_InventThirdRoom_ToTable">
+            <End Role="InventNames" EntitySet="InventNames" />
+            <End Role="InventThirdRoom" EntitySet="InventThirdRooms" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище InventarizationModelContainer" CdmEntityContainer="Inventarization">
+          <EntitySetMapping Name="Invent_Users">
+            <EntityTypeMapping TypeName="InventarizationModel.Invent_Users">
+              <MappingFragment StoreEntitySet="Invent_Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventFirstRooms">
+            <EntityTypeMapping TypeName="InventarizationModel.InventFirstRoom">
+              <MappingFragment StoreEntitySet="InventFirstRoom">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="InventNumber" ColumnName="InventNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventNames">
+            <EntityTypeMapping TypeName="InventarizationModel.InventName">
+              <MappingFragment StoreEntitySet="InventNames">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventSecondRooms">
+            <EntityTypeMapping TypeName="InventarizationModel.InventSecondRoom">
+              <MappingFragment StoreEntitySet="InventSecondRoom">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="InventNumber" ColumnName="InventNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventThirdRooms">
+            <EntityTypeMapping TypeName="InventarizationModel.InventThirdRoom">
+              <MappingFragment StoreEntitySet="InventThirdRoom">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="InventNumber" ColumnName="InventNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
