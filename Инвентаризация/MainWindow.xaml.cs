@@ -71,13 +71,17 @@ namespace Инвентаризация
             {
                 if (invent_Users.Login == Login && invent_Users.Password == Password)
                 {
+                    Selecting_Rooms_Win selecting_Rooms_Win = new Selecting_Rooms_Win();
+                    MainWindow mainWindow = new MainWindow();
                     if (invent_Users.Login == "Director")
                     {
-                        
+                        selecting_Rooms_Win.Show();
+                        mainWindow.Close();
                     }
                     else if (invent_Users.Login == "Admin")
                     {
-                        
+                        selecting_Rooms_Win.Show();
+                        mainWindow.Close();
                     }
                 }
                 else
