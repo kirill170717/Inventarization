@@ -128,7 +128,7 @@
                 </Image>
 
             </StackPanel>
-            <Image x:Name="_3" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -139,7 +139,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="_3_Copy" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Monitor" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -150,7 +150,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="_3_Copy1" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="PC" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -208,6 +208,48 @@
                 </Button.Style>
 
             </Button>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="164,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Столы">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="274,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="81" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мониторы">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мыши">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="148,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="91" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Клавиатуры">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="301,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="26" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="ПК">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
         </Grid>
         <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="411,85,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
             <DataGrid.Background>
@@ -238,7 +280,7 @@
 
         </DataGrid>
 
-        <Image x:Name="1" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
+        <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/123.png"/>
@@ -250,7 +292,7 @@
             </Image.Effect>
         </Image>
 
-        <Image x:Name="2" Margin="128,85,536,261" MouseDown="ExitButton_MouseDown">
+        <Image x:Name="Chair" Margin="128,85,536,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/123.png"/>
@@ -261,7 +303,7 @@
                 <BlurEffect Radius="1"/>
             </Image.Effect>
         </Image>
-        <Image x:Name="3" Margin="141,240,546,106" MouseDown="ExitButton_MouseDown">
+        <Image x:Name="Keyboard" Margin="141,240,546,106" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/123.png"/>
