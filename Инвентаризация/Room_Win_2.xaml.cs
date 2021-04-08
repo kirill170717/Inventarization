@@ -60,5 +60,10 @@ namespace Инвентаризация
         {
 
         }
+
+        private void Button_Redact_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
