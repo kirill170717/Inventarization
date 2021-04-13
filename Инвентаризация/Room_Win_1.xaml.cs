@@ -14,23 +14,18 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для Room_Win_1.xaml
-    /// </summary>
     public partial class Room_Win_1 : Window
     {
         public Room_Win_1()
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
 
 
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -42,12 +37,10 @@ namespace Инвентаризация
         {
             Close();
         }
-
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
         private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -55,9 +48,6 @@ namespace Инвентаризация
                 DragMove();
             }
         }
-
-       
-
         private void Button_Redact_Click(object sender, RoutedEventArgs e)
         {
             T_Room_1 t_Room_1 = new T_Room_1();

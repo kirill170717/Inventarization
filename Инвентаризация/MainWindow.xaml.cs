@@ -15,23 +15,15 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -59,40 +51,9 @@ namespace Инвентаризация
 
         private void Button_Auth_Click(object sender, RoutedEventArgs e)
         {
-            string Login = Convert.ToString(tb_Login);
-            string Password = Convert.ToString(tb_Password);
-            InventarizationEntities inventarization = new InventarizationEntities();
-            Invent_Users invent_Users = inventarization.Invent_Users.FirstOrDefault(i => i.Login == Login);
-            if (tb_Login == null || tb_Password == null)
-            {
-                MessageBox.Show("Ключевые поля не заполнены", "Ошибка");
-            }
-            else if (invent_Users != null) 
-            {
-                if (invent_Users.Login == Login && invent_Users.Password == Password)
-                {
-                    Selecting_Rooms_Win selecting_Rooms_Win = new Selecting_Rooms_Win();
-                    MainWindow mainWindow = new MainWindow();
-                    if (invent_Users.Login == "Director")
-                    {
-                        selecting_Rooms_Win.Show();
-                        mainWindow.Close();
-                    }
-                    else if (invent_Users.Login == "Admin")
-                    {
-                        selecting_Rooms_Win.Show();
-                        mainWindow.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Неверный логин или пароль", "Ошибка");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Пользователя с таким логином не существует", "Ошибка");
-            }
+            Auth auth = new Auth();
+            auth.Button_Auth_Click(tb_Login.Text, tb_Password.Text);
+            Close();
         }
     }
 }

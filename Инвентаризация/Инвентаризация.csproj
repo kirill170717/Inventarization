@@ -87,6 +87,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Auth.cs" />
     <Compile Include="Room_Win_1.xaml.cs">
       <DependentUpon>Room_Win_1.xaml</DependentUpon>
     </Compile>

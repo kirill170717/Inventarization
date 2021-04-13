@@ -27,24 +27,19 @@
                         <Border x:Name="border" BorderThickness="0" BorderBrush="Black"
                                 Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                         </Border>
                         <ControlTemplate.Triggers>
                             <EventTrigger RoutedEvent="PreviewMouseDown">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                            Duration="0:0:0.100" To="2,2,0,0"/>
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" Duration="0:0:0.100" To="2,2,0,0"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-
                             <EventTrigger RoutedEvent="PreviewMouseUp">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                            Duration="0:0:0.100" To="0"/>
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" Duration="0:0:0.100" To="0"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -52,13 +47,8 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
-
         <Style x:Key="TB" TargetType="TextBox">
-
             <Setter Property="Background" Value="#FFFF662D"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
@@ -72,38 +62,22 @@
                         <Grid x:Name="root" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" SnapsToDevicePixels="True">
                             <Border x:Name="Background" BorderThickness="1" CornerRadius="2" Background="{TemplateBinding Background}" 
                                     BorderBrush="{TemplateBinding BorderBrush}"/>
-                            <ScrollViewer x:Name="PART_ContentHost"
-                                          BorderThickness="0"
-                                          Padding="{TemplateBinding Padding}"
-                                          IsTabStop="False"
-                                          Background="{x:Null}"
-                                          TextElement.Foreground="{TemplateBinding Foreground}"/>
-
-
-
+                            <ScrollViewer x:Name="PART_ContentHost" BorderThickness="0" Padding="{TemplateBinding Padding}" IsTabStop="False" Background="{x:Null}" TextElement.Foreground="{TemplateBinding Foreground}"/>
                         </Grid>
                         <ControlTemplate.Triggers>
-
                             <Trigger Property="IsMouseOver" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
-
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF80"/>
                                 <Setter Property="Background" Value="#FF5EBCD1"/>
                             </Trigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
         <Style x:Key="PB" TargetType="PasswordBox">
-
             <Setter Property="Background" Value="#FF260E0E"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
@@ -111,53 +85,33 @@
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="BorderBrush" Value="#FF5A2222"/>
             <Setter Property="Padding" Value="10,0,0,0"/>
-
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="PasswordBox">
                         <Grid x:Name="root" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" SnapsToDevicePixels="True">
                             <Border x:Name="Background" BorderThickness="1" CornerRadius="2" Background="{TemplateBinding Background}" 
                                     BorderBrush="{TemplateBinding BorderBrush}"/>
-                            <ScrollViewer x:Name="PART_ContentHost"
-                                          BorderThickness="0"
-                                          Padding="{TemplateBinding Padding}"
-                                          IsTabStop="False"
-                                          Background="{x:Null}"
-                                          TextElement.Foreground="{TemplateBinding Foreground}"/>
-
-
-
+                            <ScrollViewer x:Name="PART_ContentHost" BorderThickness="0" Padding="{TemplateBinding Padding}" IsTabStop="False" Background="{x:Null}" TextElement.Foreground="{TemplateBinding Foreground}"/>
                         </Grid>
                         <ControlTemplate.Triggers>
-
                             <Trigger Property="IsMouseOver" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
-
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
                                 <Setter Property="Background" Value="#FF1B0B0B"/>
                             </Trigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
     </Window.Resources>
-
     <Grid>
-
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="130"/>
             <RowDefinition Height="325"/>
-
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
@@ -171,7 +125,6 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -182,36 +135,22 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-
             </StackPanel>
         </Grid>
         <Grid Name = "Logo"  Background="Transparent" Grid.Row="1" MouseDown="Logo_MouseDown"/>
-
-
         <Image x:Name="LogoS" Margin="68,22,73,307" MouseDown="MinButton_MouseDown" Grid.RowSpan="3">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/11.ico"/>
-
                 </Style>
             </Image.Style>
-
         </Image>
-
-
-
-
-
-
-
-
         <TextBox Name="tb_Login" Grid.Row="2" Style="{StaticResource TB}" Margin="25,93,25,0" VerticalAlignment="Top"    />
         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Логин"
             Grid.Row="2" Margin="37,103,0,0" VerticalAlignment="Top" Foreground="White">
@@ -260,8 +199,6 @@
                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                     Background="{TemplateBinding Background}">
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
@@ -275,34 +212,12 @@
                                             </Setter.Value>
                                         </Setter>
                                     </Trigger>
-                                    <EventTrigger RoutedEvent="UIElement.PreviewMouseDown">
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                    Duration="0:0:0.100" To="2,2,0,0"/>
-
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </EventTrigger>
-
-                                    <EventTrigger RoutedEvent="UIElement.PreviewMouseUp">
-                                        <BeginStoryboard>
-                                            <Storyboard>
-                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                    Duration="0:0:0.100" To="0"/>
-                                            </Storyboard>
-                                        </BeginStoryboard>
-                                    </EventTrigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
-
                 </Style>
             </Button.Style>
-
         </Button>
-
     </Grid>
-
 </Window>
