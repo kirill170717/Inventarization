@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для T_Room_1.xaml
-    /// </summary>
+
     public partial class T_Room_1 : Window
     {
         public T_Room_1()
