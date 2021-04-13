@@ -128,7 +128,7 @@
                 </Image>
 
             </StackPanel>
-            <Image x:Name="Room_1" Margin="73,81,73,265" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Room_1" Margin="73,81,73,265" MouseDown="Room_1_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -139,7 +139,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Room_2" Margin="73,204,73,140" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Room_2" Margin="73,204,73,140" MouseDown="Room_2_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -150,7 +150,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Room_3" Margin="73,329,73,10" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Room_3" Margin="73,329,73,10" MouseDown="Room_3_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
