@@ -175,62 +175,13 @@
                 </Button.Style>
 
             </Button>
-        </Grid>
-        <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,85,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
-            <DataGrid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
-                    <GradientStop Color="#FF6C53E6" Offset="0.052"/>
-                    <GradientStop Color="#FF6D53E8"/>
-                    <GradientStop Color="#FF522B5F" Offset="0.855"/>
-                </LinearGradientBrush>
-            </DataGrid.Background>
-            <DataGrid.Columns  >
-                <DataGridTextColumn Binding="{Binding User_ID}" Header="User_ID" Width="*" >
-                    <DataGridTextColumn.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF050202" Offset="0"/>
-                            <GradientStop Color="#FF672727" Offset="1"/>
-                            <GradientStop Color="#FF451A1A" Offset="0.5"/>
-                        </LinearGradientBrush>
-                    </DataGridTextColumn.Foreground>
-                </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Login" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Password" Width="*"/>
-
-
-
-            </DataGrid.Columns>
-
-        </DataGrid>
-        <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
-                <Image x:Name="MinButton1" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/88.png"/>
-
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-                <Image x:Name="ExitButton1" Width="37" Margin="3,10,3,-8" MouseDown="ExitButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/99.png"/>
-
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-
-            </StackPanel>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
             <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
@@ -264,60 +215,6 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Button 
-                Content="Редактировать"  FontSize="16" Foreground="White" Click="Button_Redact_Click" Margin="136,347,537,64">
-                <Button.Style>
-                    <Style  TargetType="{x:Type Button}">
-                        <Setter Property="OverridesDefaultStyle" Value="True"/>
-                        <Setter Property="Background">
-                            <Setter.Value>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFFFAE00" Offset="0"/>
-                                    <GradientStop Color="#FFFFAE00" Offset="1"/>
-                                    <GradientStop Color="#FFE0542B" Offset="0.519"/>
-                                </LinearGradientBrush>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
-                                        Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background">
-                                                <Setter.Value>
-                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                        <GradientStop Color="#FF00E8FF" Offset="0"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="1"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="0.5"/>
-                                                    </LinearGradientBrush>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </Trigger>
-
-
-
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-
-                    </Style>
-                </Button.Style>
-
-            </Button>
-            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
-                <TextBlock.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF7059FC" Offset="0"/>
-                        <GradientStop Color="#FF45171A" Offset="1"/>
-                    </LinearGradientBrush>
-                </TextBlock.Background></TextBlock>
             <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="164,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Столы">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -354,6 +251,34 @@
                     </LinearGradientBrush>
                 </TextBlock.Background></TextBlock>
         </Grid>
+        <DataGrid x:Name="T_Room_Win_2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,61,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4C223F" Offset="0.921"/>
+
+                    <GradientStop Color="#FF6C53E6" Offset="0.052"/>
+                    <GradientStop Color="#FF6D53E8"/>
+                    <GradientStop Color="#FF522B5F" Offset="0.855"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns  >
+                <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" Width="*" >
+                    <DataGridTextColumn.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF050202" Offset="0"/>
+                            <GradientStop Color="#FF672727" Offset="1"/>
+                            <GradientStop Color="#FF451A1A" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </DataGridTextColumn.Foreground>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding InventNumber}" Header="Инв. номер" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
+
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
         <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">

@@ -132,7 +132,7 @@
                 </Image>
 
             </StackPanel>
-            <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
+            <DataGrid x:Name="T_Room_2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
                 <DataGrid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                         <GradientStop Color="#FF4C223F" Offset="0.921"/>

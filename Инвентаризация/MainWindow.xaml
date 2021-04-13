@@ -174,7 +174,7 @@
         </TextBlock>
         <PasswordBox Name="tb_Password" Grid.Row="2" Style="{StaticResource PB}" Margin="25,153,25,0" VerticalAlignment="Top"  />
         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Пароль"
-            Grid.Row="2" Margin="37,169,0,0" VerticalAlignment="Top" Foreground="White">
+            Grid.Row="2" Margin="37,160,0,0" VerticalAlignment="Top" Foreground="White">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility" Value="Collapsed"/>
