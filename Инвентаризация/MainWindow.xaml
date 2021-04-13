@@ -18,6 +18,9 @@
         </LinearGradientBrush>
     </Window.Background>
     <Window.Resources>
+
+
+
         <Style x:Key="ComboboxButton" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Background" Value="#FF471313"/>
@@ -77,8 +80,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
         <Style x:Key="PB" TargetType="PasswordBox">
-            <Setter Property="Background" Value="#FF260E0E"/>
+            <Setter Property="Background" Value="#FFFF662D"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
             <Setter Property="Foreground" Value="#FFDADBE7"/>
@@ -106,6 +110,9 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+
+
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -143,8 +150,8 @@
                 </Image>
             </StackPanel>
         </Grid>
-        <Grid Name = "Logo"  Background="Transparent" Grid.Row="1" MouseDown="Logo_MouseDown"/>
-        <Image x:Name="LogoS" Margin="68,22,73,307" MouseDown="MinButton_MouseDown" Grid.RowSpan="3">
+        <Grid Name = "Logo"  Background="Transparent" Grid.Row="1" MouseDown="Logo_MouseDown" Margin="-427,1,427,324" Grid.RowSpan="2"/>
+        <Image x:Name="LogoS" Margin="68,22,72,237" MouseDown="MinButton_MouseDown" Grid.RowSpan="3">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/11.ico"/>
@@ -165,14 +172,14 @@
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        <TextBox Name="tb_Password" Grid.Row="2" Style="{StaticResource TB}" Margin="25,144,25,0" VerticalAlignment="Top"  />
+        <PasswordBox Name="tb_Password" Grid.Row="2" Style="{StaticResource PB}" Margin="25,153,25,0" VerticalAlignment="Top"  />
         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Пароль"
-            Grid.Row="2" Margin="37,153,0,0" VerticalAlignment="Top" Foreground="White">
+            Grid.Row="2" Margin="37,160,0,0" VerticalAlignment="Top" Foreground="White">
             <TextBlock.Style>
                 <Style TargetType="{x:Type TextBlock}">
                     <Setter Property="Visibility" Value="Collapsed"/>
                     <Style.Triggers>
-                        <DataTrigger Binding="{Binding Text, ElementName=tb_Password}" Value="">
+                        <DataTrigger Binding="{Binding Text, ElementName=tb_Login}" Value="">
                             <Setter Property="Visibility" Value="Visible"/>
                         </DataTrigger>
                     </Style.Triggers>

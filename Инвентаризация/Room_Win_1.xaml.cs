@@ -50,5 +50,10 @@ namespace Инвентаризация
             T_Room_1 t_Room_1 = new T_Room_1();
             t_Room_1.Show();
         }
+
+        private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

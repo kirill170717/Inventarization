@@ -65,5 +65,10 @@ namespace Инвентаризация
         {
 
         }
+
+        private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
