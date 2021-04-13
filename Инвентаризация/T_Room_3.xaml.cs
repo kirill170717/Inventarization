@@ -55,5 +55,15 @@ namespace Инвентаризация
                 DragMove();
             }
         }
+
+        private void Button_Del_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Ins_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

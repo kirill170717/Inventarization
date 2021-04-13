@@ -102,9 +102,9 @@
     </Window.Resources>
     <Grid Margin="0,0,2,0">
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-            
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399" Width="86">
-                <Image x:Name="MinButton" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
+                <Image x:Name="MinButton" Width="38" Margin="3,0,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
@@ -115,7 +115,7 @@
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-                <Image x:Name="ExitButton" Width="37" Margin="3,10,3,-8" MouseDown="ExitButton_MouseDown">
+                <Image x:Name="ExitButton" Width="37" Margin="3,0,3,-8" MouseDown="ExitButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>
@@ -181,7 +181,22 @@
                         <GradientStop Color="#FF7059FC" Offset="0"/>
                         <GradientStop Color="#FF45171A" Offset="1"/>
                     </LinearGradientBrush>
-                </TextBlock.Background><Run Text="Третья "/><Run Text="комната"/><LineBreak/><Run/></TextBlock>
+                </TextBlock.Background>
+                <Run Text="Третья "/><Run Text="комната"/>
+                <LineBreak/>
+                <Run/>
+            </TextBlock>
+            <Image x:Name="De_AuthButton" Margin="10,0,493,391" MouseDown="De_Auth_Button_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/выход с акк.png"/>
+
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
         </Grid>
 
     </Grid>

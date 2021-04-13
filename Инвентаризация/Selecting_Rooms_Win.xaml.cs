@@ -78,5 +78,10 @@ namespace Инвентаризация
             Room_Win_3 room_Win_3 = new Room_Win_3();
             room_Win_3.Show();
         }
+
+        private void De_Auth_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
