@@ -15,23 +15,15 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -59,7 +51,9 @@ namespace Инвентаризация
 
         private void Button_Auth_Click(object sender, RoutedEventArgs e)
         {
-
+            Auth auth = new Auth();
+            auth.Button_Auth_Click(tb_Login.Text, tb_Password.Text);
+            Close();
         }
     }
 }
