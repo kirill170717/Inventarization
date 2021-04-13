@@ -296,6 +296,17 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
+            <Image x:Name="Back_Button" Margin="663,10,92,391" MouseDown="Back_Button_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/назад меньше.png"/>
+
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
         </Grid>
     </Grid>
 </Window>

@@ -103,8 +103,21 @@
     <Grid Margin="0,0,2,0">
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399" Width="86">
-                <Image x:Name="MinButton" Width="38" Margin="3,0,3,-8" MouseDown="MinButton_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,391" Width="140">
+
+                <Image x:Name="Back_Button" Margin="0,10,0,2" MouseDown="Back_Button_MouseDown" Width="50">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/назад меньше.png"/>
+
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+
+                <Image x:Name="MinButton" Width="42" Margin="3,0,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
@@ -115,7 +128,7 @@
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-                <Image x:Name="ExitButton" Width="37" Margin="3,0,3,-8" MouseDown="ExitButton_MouseDown">
+                <Image x:Name="ExitButton" Width="40" Margin="3,0,3,-8" MouseDown="ExitButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>

@@ -250,6 +250,17 @@
                         <GradientStop Color="#FF45171A" Offset="1"/>
                     </LinearGradientBrush>
                 </TextBlock.Background></TextBlock>
+            <Image x:Name="Back_Button" Margin="663,10,92,391" MouseDown="Back_Button_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/назад меньше.png"/>
+
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
         </Grid>
         <DataGrid x:Name="T_Room_Win_2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,61,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
             <DataGrid.Background>

@@ -268,6 +268,17 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
+            <Image x:Name="Back_Button" Margin="663,10,92,391" MouseDown="Back_Button_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/назад меньше.png"/>
+
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
         </Grid>
         <DataGrid x:Name="T_Room_1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
             <DataGrid.Background>
