@@ -274,6 +274,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Inventarization.mdf</DependentUpon>
     </Content>
+    <Resource Include="Source\выход с акк.png" />
+    <Resource Include="Source\клава %282%29.png" />
+    <Resource Include="Source\клава.png" />
+    <Resource Include="Source\монитор 2.png" />
+    <Resource Include="Source\монитор.png" />
+    <Resource Include="Source\мышь.png" />
+    <Resource Include="Source\стол.png" />
+    <Resource Include="Source\стул.png" />
+    <Resource Include="Source\пк.png" />
+    <Resource Include="Source\стул 2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Source\123.png" />

@@ -62,5 +62,10 @@ namespace Инвентаризация
             Trans trans = new Trans();
             trans.Room_3_MouseDown();
         }
+
+        private void De_Auth_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

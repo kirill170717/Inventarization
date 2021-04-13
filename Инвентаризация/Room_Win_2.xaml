@@ -128,10 +128,113 @@
                 </Image>
 
             </StackPanel>
+            <Button 
+                Content="Редактировать"  FontSize="16" Foreground="White" Click="Button_Redact_Click" Margin="136,347,537,64">
+                <Button.Style>
+                    <Style  TargetType="{x:Type Button}">
+                        <Setter Property="OverridesDefaultStyle" Value="True"/>
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFFFAE00" Offset="0"/>
+                                    <GradientStop Color="#FFFFAE00" Offset="1"/>
+                                    <GradientStop Color="#FFE0542B" Offset="0.519"/>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
+                                        Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                        <GradientStop Color="#FF00E8FF" Offset="0"/>
+                                                        <GradientStop Color="#FF2F8BD8" Offset="1"/>
+                                                        <GradientStop Color="#FF2F8BD8" Offset="0.5"/>
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+
+
+
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                    </Style>
+                </Button.Style>
+
+            </Button>
+        </Grid>
+        <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="411,85,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4C223F" Offset="0.921"/>
+
+                    <GradientStop Color="#FF6C53E6" Offset="0.052"/>
+                    <GradientStop Color="#FF6D53E8"/>
+                    <GradientStop Color="#FF522B5F" Offset="0.855"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns  >
+                <DataGridTextColumn Binding="{Binding User_ID}" Header="User_ID" Width="*" >
+                    <DataGridTextColumn.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF050202" Offset="0"/>
+                            <GradientStop Color="#FF672727" Offset="1"/>
+                            <GradientStop Color="#FF451A1A" Offset="0.5"/>
+                        </LinearGradientBrush>
+                    </DataGridTextColumn.Foreground>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Login" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Password" Width="*"/>
+
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
+                <Image x:Name="MinButton1" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/88.png"/>
+
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="ExitButton1" Width="37" Margin="3,10,3,-8" MouseDown="ExitButton_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/99.png"/>
+
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
+                </Image>
+
+            </StackPanel>
             <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/мышь.png"/>
 
                     </Style>
                 </Image.Style>
@@ -142,7 +245,7 @@
             <Image x:Name="Monitor" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/монитор.png"/>
 
                     </Style>
                 </Image.Style>
@@ -153,7 +256,7 @@
             <Image x:Name="PC" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/пк.png"/>
 
                     </Style>
                 </Image.Style>
@@ -251,39 +354,10 @@
                     </LinearGradientBrush>
                 </TextBlock.Background></TextBlock>
         </Grid>
-        <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="411,85,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
-            <DataGrid.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
-                    <GradientStop Color="#FF6C53E6" Offset="0.052"/>
-                    <GradientStop Color="#FF6D53E8"/>
-                    <GradientStop Color="#FF522B5F" Offset="0.855"/>
-                </LinearGradientBrush>
-            </DataGrid.Background>
-            <DataGrid.Columns  >
-                <DataGridTextColumn Binding="{Binding User_ID}" Header="User_ID" Width="*" >
-                    <DataGridTextColumn.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF050202" Offset="0"/>
-                            <GradientStop Color="#FF672727" Offset="1"/>
-                            <GradientStop Color="#FF451A1A" Offset="0.5"/>
-                        </LinearGradientBrush>
-                    </DataGridTextColumn.Foreground>
-                </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Login" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Password" Width="*"/>
-
-
-
-            </DataGrid.Columns>
-
-        </DataGrid>
-
         <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/стул.png"/>
 
                 </Style>
             </Image.Style>
@@ -291,11 +365,10 @@
                 <BlurEffect Radius="1"/>
             </Image.Effect>
         </Image>
-
         <Image x:Name="Chair" Margin="128,85,536,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/стол.png"/>
 
                 </Style>
             </Image.Style>
@@ -306,7 +379,7 @@
         <Image x:Name="Keyboard" Margin="141,240,546,106" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/клава (2).png"/>
 
                 </Style>
             </Image.Style>

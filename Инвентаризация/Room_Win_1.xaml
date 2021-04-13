@@ -131,7 +131,7 @@
             <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/мышь.png"/>
 
                     </Style>
                 </Image.Style>
@@ -142,7 +142,7 @@
             <Image x:Name="Monitor" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/монитор.png"/>
 
                     </Style>
                 </Image.Style>
@@ -153,7 +153,7 @@
             <Image x:Name="PC" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/123.png"/>
+                        <Setter Property="Source" Value="Source/пк.png"/>
 
                     </Style>
                 </Image.Style>
@@ -283,7 +283,7 @@
         <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/стул.png"/>
 
                 </Style>
             </Image.Style>
@@ -295,7 +295,7 @@
         <Image x:Name="Chair" Margin="128,85,536,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/стол.png"/>
 
                 </Style>
             </Image.Style>
@@ -306,7 +306,7 @@
         <Image x:Name="Keyboard" Margin="141,240,546,106" MouseDown="ExitButton_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
-                    <Setter Property="Source" Value="Source/123.png"/>
+                    <Setter Property="Source" Value="Source/клава (2).png"/>
 
                 </Style>
             </Image.Style>
