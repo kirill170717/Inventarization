@@ -274,6 +274,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Inventarization.mdf</DependentUpon>
     </Content>
+    <Resource Include="Source\free-icon-door-2809914 %281%29.png" />
     <Resource Include="Source\назад меньше.png" />
     <Resource Include="Source\Назад.png" />
     <Resource Include="Source\free-icon-database-security-2818690.png" />
