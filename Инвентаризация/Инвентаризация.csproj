@@ -91,25 +91,15 @@
     <Compile Include="Room_Win_1.xaml.cs">
       <DependentUpon>Room_Win_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room_Win_1_Dir.xaml.cs">
-      <DependentUpon>Room_Win_1_Dir.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Room_Win_2.xaml.cs">
       <DependentUpon>Room_Win_2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Room_Win_2_Dir.xaml.cs">
-      <DependentUpon>Room_Win_2_Dir.xaml</DependentUpon>
     </Compile>
     <Compile Include="Room_Win_3.xaml.cs">
       <DependentUpon>Room_Win_3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room_Win_3_Dir.xaml.cs">
-      <DependentUpon>Room_Win_3_Dir.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Selecting_Rooms_Win.xaml.cs">
       <DependentUpon>Selecting_Rooms_Win.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Trans.cs" />
     <Compile Include="T_Room_1.xaml.cs">
       <DependentUpon>T_Room_1.xaml</DependentUpon>
     </Compile>
@@ -165,23 +155,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Room_Win_1_Dir.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Room_Win_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Room_Win_2_Dir.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Room_Win_3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Room_Win_3_Dir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

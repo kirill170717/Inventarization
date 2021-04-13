@@ -25,15 +25,15 @@ namespace Инвентаризация
                 {
                     Selecting_Rooms_Win selecting_Rooms_Win = new Selecting_Rooms_Win();
                     MainWindow mainWindow = new MainWindow();
-                    if (invent_Users.Login == "Director")
+                    if (invent_Users.Login == "Admin")
                     {
-                        role = 2;
+                        role = 1;
                         selecting_Rooms_Win.Show();
                         mainWindow.Close();
                     }
-                    else if (invent_Users.Login == "Admin")
+                    else if (invent_Users.Login == "Director")
                     {
-                        role = 1;
+                        role = 2;
                         selecting_Rooms_Win.Show();
                         mainWindow.Close();
                     }

@@ -22,9 +22,6 @@ namespace Инвентаризация
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-
         }
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {

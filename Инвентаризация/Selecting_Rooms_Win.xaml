@@ -23,8 +23,6 @@
                         <Border x:Name="border" BorderThickness="0" BorderBrush="Black"
                                 Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                         </Border>
                         <ControlTemplate.Triggers>
                             <EventTrigger RoutedEvent="PreviewMouseDown">
@@ -35,7 +33,6 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-
                             <EventTrigger RoutedEvent="PreviewMouseUp">
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -48,13 +45,8 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
-
         <Style x:Key="TB" TargetType="TextBox">
-
             <Setter Property="Background" Value="#FFFF662D"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
@@ -74,19 +66,12 @@
                                           IsTabStop="False"
                                           Background="{x:Null}"
                                           TextElement.Foreground="{TemplateBinding Foreground}"/>
-
-
-
                         </Grid>
                         <ControlTemplate.Triggers>
-
                             <Trigger Property="IsMouseOver" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
-
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF80"/>
                                 <Setter Property="Background" Value="#FF5EBCD1"/>
                             </Trigger>
@@ -95,20 +80,15 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
     </Window.Resources>
     <Grid Margin="0,0,2,0">
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399" Width="86">
                 <Image x:Name="MinButton" Width="38" Margin="3,0,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -119,20 +99,17 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-
             </StackPanel>
             <Image x:Name="Room_1" Margin="73,81,73,265" MouseDown="Room_1_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -143,7 +120,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -154,7 +130,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -190,7 +165,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/выход с акк.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -198,6 +172,5 @@
                 </Image.Effect>
             </Image>
         </Grid>
-
     </Grid>
 </Window>

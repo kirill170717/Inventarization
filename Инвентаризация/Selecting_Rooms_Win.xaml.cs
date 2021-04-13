@@ -47,25 +47,34 @@ namespace Инвентаризация
         }
         private void Room_1_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Trans trans = new Trans();
-            trans.Room_1_MouseDown();
+            Room_Win_1 room_Win_1 = new Room_Win_1();
+            room_Win_1.Show();
+            Close();
         }
 
         private void Room_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Trans trans = new Trans();
-            trans.Room_2_MouseDown();
+            Room_Win_2 room_Win_2 = new Room_Win_2();
+            room_Win_2.Show();
+            Close();
         }
 
         private void Room_3_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Trans trans = new Trans();
-            trans.Room_3_MouseDown();
+            Room_Win_3 room_Win_3 = new Room_Win_3();
+            room_Win_3.Show();
+            Close();
         }
 
         private void De_Auth_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Выйти из аккаунта?", "Выход", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                mainWindow.Show();
+                Close();
+            }
         }
     }
 }

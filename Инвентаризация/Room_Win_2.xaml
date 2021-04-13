@@ -264,7 +264,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Button 
+            <Button x:Name="Edit"
                 Content="Редактировать"  FontSize="16" Foreground="White" Click="Button_Redact_Click" Margin="136,347,537,64">
                 <Button.Style>
                     <Style  TargetType="{x:Type Button}">

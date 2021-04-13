@@ -27,10 +27,7 @@ namespace Инвентаризация
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-
-
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -63,7 +60,8 @@ namespace Инвентаризация
 
         private void Button_Redact_Click(object sender, RoutedEventArgs e)
         {
-
+            T_Room_2 t_Room_2 = new T_Room_2();
+            t_Room_2.Show();
         }
     }
 }
