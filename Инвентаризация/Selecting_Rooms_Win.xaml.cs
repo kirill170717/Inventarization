@@ -14,23 +14,15 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для Selecting_Rooms_Win.xaml
-    /// </summary>
     public partial class Selecting_Rooms_Win : Window
     {
         public Selecting_Rooms_Win()
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -42,12 +34,10 @@ namespace Инвентаризация
         {
             Close();
         }
-
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
         private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -55,28 +45,22 @@ namespace Инвентаризация
                 DragMove();
             }
         }
-
-        private void Button_Auth_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Room_1_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Room_Win_1 room_Win_1 = new Room_Win_1();
-            room_Win_1.Show();
+            Trans trans = new Trans();
+            trans.Room_1_MouseDown();
         }
 
         private void Room_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Room_Win_2 room_Win_2 = new Room_Win_2();
-            room_Win_2.Show();
+            Trans trans = new Trans();
+            trans.Room_2_MouseDown();
         }
 
         private void Room_3_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Room_Win_3 room_Win_3 = new Room_Win_3();
-            room_Win_3.Show();
+            Trans trans = new Trans();
+            trans.Room_3_MouseDown();
         }
     }
 }

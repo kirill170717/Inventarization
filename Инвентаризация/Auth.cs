@@ -9,6 +9,7 @@ namespace Инвентаризация
 {
     public class Auth
     {
+        public int role;
         public bool Button_Auth_Click(string tb_Login, string tb_Password)
         {
             InventarizationEntities db = new InventarizationEntities();
@@ -26,11 +27,13 @@ namespace Инвентаризация
                     MainWindow mainWindow = new MainWindow();
                     if (invent_Users.Login == "Director")
                     {
+                        role = 2;
                         selecting_Rooms_Win.Show();
                         mainWindow.Close();
                     }
                     else if (invent_Users.Login == "Admin")
                     {
+                        role = 1;
                         selecting_Rooms_Win.Show();
                         mainWindow.Close();
                     }

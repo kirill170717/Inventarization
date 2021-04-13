@@ -100,6 +100,7 @@
     <Compile Include="Selecting_Rooms_Win.xaml.cs">
       <DependentUpon>Selecting_Rooms_Win.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Trans.cs" />
     <Compile Include="T_Room_1.xaml.cs">
       <DependentUpon>T_Room_1.xaml</DependentUpon>
     </Compile>
