@@ -10,20 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для BD_Win.xaml
+    /// </summary>
+    public partial class BD_Win : Window
     {
-        public MainWindow()
+        public BD_Win()
         {
             InitializeComponent();
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
         }
+
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -35,12 +39,10 @@ namespace Инвентаризация
         {
             Close();
         }
-
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
         private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -49,14 +51,14 @@ namespace Инвентаризация
             }
         }
 
-        private void Button_Auth_Click(object sender, RoutedEventArgs e)
+        private void Button_Ins_Click(object sender, RoutedEventArgs e)
         {
-            Auth auth = new Auth();
-            bool close = auth.Button_Auth_Click(tb_Login.Text, tb_Password.Password);
-            if (close) 
-            {
-                Close();
-            }
+
+        }
+
+        private void Button_Del_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

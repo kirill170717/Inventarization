@@ -20,9 +20,11 @@ namespace Инвентаризация
         {
             InitializeComponent();
         }
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
         }
+
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -34,6 +36,13 @@ namespace Инвентаризация
         {
             Close();
         }
+        private void BD_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            BD_Win bD_Win = new BD_Win();
+            bD_Win.Show();
+            Close();
+        }
+
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;

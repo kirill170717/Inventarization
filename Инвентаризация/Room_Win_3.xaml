@@ -177,6 +177,25 @@
             </Button>
             <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
 
+                <Image x:Name="Back_Button1" Margin="17,4,719,404" MouseDown="Back_Button_MouseDown" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="Source/назад меньше.png"/>
+
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
                     <Image x:Name="MinButton1" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
                         <Image.Style>
@@ -200,6 +219,7 @@
                             <BlurEffect Radius="1"/>
                         </Image.Effect>
                     </Image>
+
 
                 </StackPanel>
                 <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
@@ -243,9 +263,9 @@
                             <Setter Property="Background">
                                 <Setter.Value>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FFFFAE00" Offset="0"/>
-                                        <GradientStop Color="#FFFFAE00" Offset="1"/>
-                                        <GradientStop Color="#FFE0542B" Offset="0.519"/>
+                                        <GradientStop Color="#FF42D4AD" Offset="0"/>
+                                        <GradientStop Color="#FF42D4AD" Offset="1"/>
+                                        <GradientStop Color="#FF886FDE" Offset="0.519"/>
                                     </LinearGradientBrush>
                                 </Setter.Value>
                             </Setter>
@@ -253,26 +273,21 @@
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
                                         <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
-                                            Background="{TemplateBinding Background}">
+                                    Background="{TemplateBinding Background}">
                                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                         </Border>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Setter Property="Background">
                                                     <Setter.Value>
                                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                            <GradientStop Color="#FF00E8FF" Offset="0"/>
-                                                            <GradientStop Color="#FF2F8BD8" Offset="1"/>
-                                                            <GradientStop Color="#FF2F8BD8" Offset="0.5"/>
+                                                            <GradientStop Color="#FFAD6AFD" Offset="0"/>
+                                                            <GradientStop Color="#FFAD6AFD" Offset="1"/>
+                                                            <GradientStop Color="#FFAD6AFD" Offset="0.5"/>
                                                         </LinearGradientBrush>
                                                     </Setter.Value>
                                                 </Setter>
                                             </Trigger>
-
-
-
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
                                 </Setter.Value>
@@ -359,7 +374,7 @@
                 </Image.Effect>
             </Image>
         </Grid>
-        <DataGrid x:Name="T_Users" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="411,85,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
+        <DataGrid x:Name="T_RW1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,67,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
@@ -370,7 +385,7 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns  >
-                <DataGridTextColumn Binding="{Binding User_ID}" Header="User_ID" Width="*" >
+                <DataGridTextColumn Binding="{Binding User_ID}" Header="Название" Width="*" >
                     <DataGridTextColumn.Foreground>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF050202" Offset="0"/>
@@ -379,12 +394,14 @@
                         </LinearGradientBrush>
                     </DataGridTextColumn.Foreground>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Login" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Password" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Номер" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
 
 
 
             </DataGrid.Columns>
+
+
 
         </DataGrid>
     </Grid>

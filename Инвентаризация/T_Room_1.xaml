@@ -23,24 +23,19 @@
                         <Border x:Name="border" BorderThickness="0" BorderBrush="Black"
                                 Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                         </Border>
                         <ControlTemplate.Triggers>
                             <EventTrigger RoutedEvent="PreviewMouseDown">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                            Duration="0:0:0.100" To="2,2,0,0"/>
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" Duration="0:0:0.100" To="2,2,0,0"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-
                             <EventTrigger RoutedEvent="PreviewMouseUp">
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <ThicknessAnimation Storyboard.TargetProperty="Margin"
-                                                            Duration="0:0:0.100" To="0"/>
+                                        <ThicknessAnimation Storyboard.TargetProperty="Margin" Duration="0:0:0.100" To="0"/>
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -48,14 +43,9 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
-
         <Style x:Key="TB" TargetType="TextBox">
-
-            <Setter Property="Background" Value="#FFFF662D"/>
+            <Setter Property="Background" Value="#FFAD6AFD"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
             <Setter Property="Foreground" Value="#FFDADBE7"/>
@@ -68,45 +58,27 @@
                         <Grid x:Name="root" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" SnapsToDevicePixels="True">
                             <Border x:Name="Background" BorderThickness="1" CornerRadius="2" Background="{TemplateBinding Background}" 
                                     BorderBrush="{TemplateBinding BorderBrush}"/>
-                            <ScrollViewer x:Name="PART_ContentHost"
-                                          BorderThickness="0"
-                                          Padding="{TemplateBinding Padding}"
-                                          IsTabStop="False"
-                                          Background="{x:Null}"
-                                          TextElement.Foreground="{TemplateBinding Foreground}"/>
-
-
-
+                            <ScrollViewer x:Name="PART_ContentHost" BorderThickness="0" Padding="{TemplateBinding Padding}" IsTabStop="False" Background="{x:Null}" TextElement.Foreground="{TemplateBinding Foreground}"/>
                         </Grid>
                         <ControlTemplate.Triggers>
-
                             <Trigger Property="IsMouseOver" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
-
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF80"/>
-                                <Setter Property="Background" Value="#FF5EBCD1"/>
+                                <Setter Property="Background" Value="#FF9382FF"/>
                             </Trigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
 
 
     </Window.Resources>
     <Grid>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-            <Polygon Fill="Black" Opacity="0.2"
-                 Points="107,0,
-                 115,7,
-                 249,7,
-                 257,0"/>
+            
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
                 <Image x:Name="MinButton" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
@@ -140,9 +112,9 @@
                         <Setter Property="Background">
                             <Setter.Value>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFFFAE00" Offset="0"/>
-                                    <GradientStop Color="#FFFFAE00" Offset="1"/>
-                                    <GradientStop Color="#FFE0542B" Offset="0.519"/>
+                                    <GradientStop Color="#FFFF2E00" Offset="0"/>
+                                    <GradientStop Color="Red" Offset="1"/>
+                                    <GradientStop Color="Red" Offset="0.519"/>
                                 </LinearGradientBrush>
                             </Setter.Value>
                         </Setter>
@@ -160,9 +132,9 @@
                                             <Setter Property="Background">
                                                 <Setter.Value>
                                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                        <GradientStop Color="#FF00E8FF" Offset="0"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="1"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="0.5"/>
+                                                        <GradientStop Color="#FFFF0074" Offset="0"/>
+                                                        <GradientStop Color="#FFFF0074" Offset="1"/>
+                                                        <GradientStop Color="#FFFF0074" Offset="0.5"/>
                                                     </LinearGradientBrush>
                                                 </Setter.Value>
                                             </Setter>
@@ -187,9 +159,9 @@
                         <Setter Property="Background">
                             <Setter.Value>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFFFAE00" Offset="0"/>
-                                    <GradientStop Color="#FFFFAE00" Offset="1"/>
-                                    <GradientStop Color="#FFE0542B" Offset="0.519"/>
+                                    <GradientStop Color="#FF42D4AD" Offset="0"/>
+                                    <GradientStop Color="#FF42D4AD" Offset="1"/>
+                                    <GradientStop Color="#FF886FDE" Offset="0.519"/>
                                 </LinearGradientBrush>
                             </Setter.Value>
                         </Setter>
@@ -197,26 +169,21 @@
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
                                     <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
-                                        Background="{TemplateBinding Background}">
+                                    Background="{TemplateBinding Background}">
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
                                             <Setter Property="Background">
                                                 <Setter.Value>
                                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                        <GradientStop Color="#FF00E8FF" Offset="0"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="1"/>
-                                                        <GradientStop Color="#FF2F8BD8" Offset="0.5"/>
+                                                        <GradientStop Color="#FFAD6AFD" Offset="0"/>
+                                                        <GradientStop Color="#FFAD6AFD" Offset="1"/>
+                                                        <GradientStop Color="#FFAD6AFD" Offset="0.5"/>
                                                     </LinearGradientBrush>
                                                 </Setter.Value>
                                             </Setter>
                                         </Trigger>
-
-
-
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Setter.Value>
@@ -280,7 +247,7 @@
                 </Image.Effect>
             </Image>
         </Grid>
-        <DataGrid x:Name="T_Room_1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
+        <DataGrid x:Name="T_Room_1a" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF4C223F" Offset="0.921"/>

@@ -141,7 +141,7 @@
                 </Image>
 
             </StackPanel>
-            <Image x:Name="Room_1" Margin="309,178,107,168" MouseDown="Room_1_MouseDown">
+            <Image x:Name="Room_1" Margin="123,183,293,163" MouseDown="Room_1_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -152,7 +152,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Room_2" Margin="123,183,293,161" MouseDown="Room_2_MouseDown">
+            <Image x:Name="Room_2" Margin="309,183,107,161" MouseDown="Room_2_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/123.png"/>
@@ -210,7 +210,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Room_2_Copy" Margin="39,329,400,15" MouseDown="Room_2_MouseDown">
+            <Image x:Name="BD" Margin="39,329,400,15" MouseDown="BD_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/free-icon-database-security-2818690.png"/>
