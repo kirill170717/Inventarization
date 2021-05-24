@@ -23,8 +23,6 @@
                         <Border x:Name="border" BorderThickness="0" BorderBrush="Black"
                                 Background="{TemplateBinding Background}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                         </Border>
                         <ControlTemplate.Triggers>
                             <EventTrigger RoutedEvent="PreviewMouseDown">
@@ -35,7 +33,6 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-
                             <EventTrigger RoutedEvent="PreviewMouseUp">
                                 <BeginStoryboard>
                                     <Storyboard>
@@ -48,13 +45,8 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
-
         <Style x:Key="TB" TargetType="TextBox">
-
             <Setter Property="Background" Value="#FFFF662D"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Height" Value="35"/>
@@ -74,41 +66,28 @@
                                           IsTabStop="False"
                                           Background="{x:Null}"
                                           TextElement.Foreground="{TemplateBinding Foreground}"/>
-
-
-
                         </Grid>
                         <ControlTemplate.Triggers>
-
                             <Trigger Property="IsMouseOver" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF91"/>
-
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
-
                                 <Setter Property="BorderBrush" Value="#FF00FF80"/>
                                 <Setter Property="Background" Value="#FF5EBCD1"/>
                             </Trigger>
-
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
-
-
     </Window.Resources>
     <Grid>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
                 <Image x:Name="MinButton" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -119,14 +98,12 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-
             </StackPanel>
             <Button 
                 Content="Редактировать"  FontSize="16" Foreground="White" Click="Button_Redact_Click" Margin="136,347,537,64">
@@ -148,8 +125,6 @@
                                     <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                         Background="{TemplateBinding Background}">
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
@@ -163,20 +138,14 @@
                                                 </Setter.Value>
                                             </Setter>
                                         </Trigger>
-
-
-
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
-
                     </Style>
                 </Button.Style>
-
             </Button>
             <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-
                 <Image x:Name="Back_Button1" Margin="17,4,719,404" MouseDown="Back_Button_MouseDown" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -189,7 +158,6 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/назад меньше.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -201,7 +169,6 @@
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Setter Property="Source" Value="Source/88.png"/>
-
                             </Style>
                         </Image.Style>
                         <Image.Effect>
@@ -212,21 +179,17 @@
                         <Image.Style>
                             <Style TargetType="{x:Type Image}">
                                 <Setter Property="Source" Value="Source/99.png"/>
-
                             </Style>
                         </Image.Style>
                         <Image.Effect>
                             <BlurEffect Radius="1"/>
                         </Image.Effect>
                     </Image>
-
-
                 </StackPanel>
                 <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/мышь.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -237,7 +200,6 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/монитор.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -248,7 +210,6 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/пк.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -292,10 +253,8 @@
                                     </ControlTemplate>
                                 </Setter.Value>
                             </Setter>
-
                         </Style>
                     </Button.Style>
-
                 </Button>
                 <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
                     <TextBlock.Background>
@@ -344,7 +303,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/стул.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -355,7 +313,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/стол.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -366,7 +323,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/клава (2).png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -384,7 +340,7 @@
                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
                 </LinearGradientBrush>
             </DataGrid.Background>
-            <DataGrid.Columns  >
+            <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding User_ID}" Header="Название" Width="*" >
                     <DataGridTextColumn.Foreground>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -396,13 +352,7 @@
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Номер" Width="*"/>
                 <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
-
-
-
             </DataGrid.Columns>
-
-
-
         </DataGrid>
     </Grid>
 </Window>

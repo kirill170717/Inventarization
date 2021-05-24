@@ -73,18 +73,14 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-
     </Window.Resources>
     <Grid>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-            
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
                 <Image x:Name="MinButton" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/88.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
@@ -95,14 +91,12 @@
                     <Image.Style>
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="Source/99.png"/>
-
                         </Style>
                     </Image.Style>
                     <Image.Effect>
                         <BlurEffect Radius="1"/>
                     </Image.Effect>
                 </Image>
-
             </StackPanel>
             <Button 
                 Content="Удалить"  FontSize="16" Foreground="White" Click="Button_Del_Click" Margin="119,348,554,63">
@@ -124,8 +118,6 @@
                                     <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                         Background="{TemplateBinding Background}">
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                     </Border>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
@@ -139,17 +131,12 @@
                                                 </Setter.Value>
                                             </Setter>
                                         </Trigger>
-
-
-
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
-
                     </Style>
                 </Button.Style>
-
             </Button>
             <Button 
                 Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="119,287,554,124">
@@ -188,10 +175,8 @@
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
-
                     </Style>
                 </Button.Style>
-
             </Button>
             <TextBox x:Name="tb_Name" Style="{StaticResource TB}" Margin="119,117,561,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -239,7 +224,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/назад меньше.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -272,4 +256,3 @@
         </DataGrid>
     </Grid>
 </Window>
-

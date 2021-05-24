@@ -1,5 +1,6 @@
 ﻿<Window x:Class="Инвентаризация.BD_Win"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"   
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -74,8 +75,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
-
     </Window.Resources>
     <Grid>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
@@ -92,13 +91,16 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
-            <TabControl Height="442" Width="792" HorizontalAlignment="Left" VerticalAlignment="Top" TabStripPlacement="Left">
-                <TabControl.Background>
+            <dragablz:TabablzControl Height="442" Width="792" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController />
+                </dragablz:TabablzControl.InterTabController>
+                <dragablz:TabablzControl.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF46181E" Offset="0"/>
                         <GradientStop Color="#FF6E56F2" Offset="1"/>
                     </LinearGradientBrush>
-                </TabControl.Background>
+                </dragablz:TabablzControl.Background>
                 <TabItem Header="Стулья" Background="#FF7058F9">
                     <Grid Margin="3,0,-2,-2">
                         <Grid.Background>
@@ -169,8 +171,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -184,17 +184,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,499,113">
@@ -233,16 +228,13 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <DataGrid x:Name="T_RW1_Copy2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="363" Margin="214,55,0,0" VerticalAlignment="Top" Width="470"  Foreground="Black">
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -260,11 +252,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                     </Grid>
                 </TabItem>
@@ -280,7 +268,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -298,11 +285,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_Copy" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -366,8 +349,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -381,17 +362,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -430,10 +406,8 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
@@ -449,7 +423,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -467,11 +440,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_Copy1" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -535,8 +504,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -550,17 +517,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -599,10 +561,8 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
@@ -618,7 +578,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -636,11 +595,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_Copy3" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -704,8 +659,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -719,17 +672,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -768,10 +716,8 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
@@ -787,7 +733,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -805,11 +750,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_Key" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -873,8 +814,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -888,17 +827,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -937,10 +871,8 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
@@ -956,7 +888,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -974,11 +905,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_PC" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -1042,8 +969,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -1057,17 +982,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -1106,10 +1026,8 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
@@ -1125,7 +1043,6 @@
                             <DataGrid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                                     <GradientStop Color="#FF6D53E8"/>
                                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
@@ -1143,11 +1060,7 @@
                                 </DataGridTextColumn>
                                 <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
                                 <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
-
-
-
                             </DataGrid.Columns>
-
                         </DataGrid>
                         <TextBox x:Name="tb_Name_Us" Style="{StaticResource TB}" Margin="76,96,500,0" VerticalAlignment="Top" Height="34"    />
                         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
@@ -1211,8 +1124,6 @@
                                                 <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
                                                     Background="{TemplateBinding Background}">
                                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
@@ -1226,17 +1137,12 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                     </Trigger>
-
-
-
                                                 </ControlTemplate.Triggers>
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                         <Button 
                             Content="Добавить"  FontSize="16" Foreground="White" Click="Button_Ins_Click" Margin="76,294,500,111">
@@ -1275,31 +1181,26 @@
                                             </ControlTemplate>
                                         </Setter.Value>
                                     </Setter>
-
                                 </Style>
                             </Button.Style>
-
                         </Button>
                     </Grid>
                 </TabItem>
-            </TabControl>
+            </dragablz:TabablzControl>
             <Image x:Name="Back_Button" Margin="674,10,81,404" MouseDown="Back_Button_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/назад меньше.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
-
             <Image x:Name="MinButton" Margin="716,7,45,398" MouseDown="MinButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/88.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
@@ -1310,7 +1211,6 @@
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/99.png"/>
-
                     </Style>
                 </Image.Style>
                 <Image.Effect>
