@@ -145,7 +145,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
+            <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown" Margin="0,0,87,399" RenderTransformOrigin="0.5,0.5">
                 <Image x:Name="Back_Button1" Margin="17,4,719,404" MouseDown="Back_Button_MouseDown" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -186,120 +186,8 @@
                         </Image.Effect>
                     </Image>
                 </StackPanel>
-                <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/мышь.png"/>
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-                <Image x:Name="Monitor" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/монитор.png"/>
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-                <Image x:Name="PC" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/пк.png"/>
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-                <Button x:Name="Edit"
-                    Content="Редактировать"  FontSize="16" Foreground="White" Click="Button_Redact_Click" Margin="136,347,537,64">
-                    <Button.Style>
-                        <Style  TargetType="{x:Type Button}">
-                            <Setter Property="OverridesDefaultStyle" Value="True"/>
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF42D4AD" Offset="0"/>
-                                        <GradientStop Color="#FF42D4AD" Offset="1"/>
-                                        <GradientStop Color="#FF886FDE" Offset="0.519"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
-                                    Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Border>
-                                        <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background">
-                                                    <Setter.Value>
-                                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                            <GradientStop Color="#FFAD6AFD" Offset="0"/>
-                                                            <GradientStop Color="#FFAD6AFD" Offset="1"/>
-                                                            <GradientStop Color="#FFAD6AFD" Offset="0.5"/>
-                                                        </LinearGradientBrush>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Trigger>
-                                        </ControlTemplate.Triggers>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="164,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Столы">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="274,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="81" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мониторы">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мыши">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="148,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="91" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Клавиатуры">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
-                <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="301,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="26" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="ПК">
-                    <TextBlock.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF7059FC" Offset="0"/>
-                            <GradientStop Color="#FF45171A" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Background></TextBlock>
             </Grid>
-            <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Chair" Margin="10,85,641,261" MouseDown="Chair_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/стул.png"/>
@@ -309,7 +197,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Chair" Margin="128,85,536,261" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Table" Margin="128,85,536,261" MouseDown="Table_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/стол.png"/>
@@ -319,7 +207,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Keyboard" Margin="141,240,546,106" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Keyboard" Margin="136,238,551,108" MouseDown="Keyboard_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/клава (2).png"/>
@@ -329,29 +217,92 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
+            <Image x:Name="PC" Margin="261,252,426,108" MouseDown="PC_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/пк.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
+            <Image x:Name="Mouse" Margin="22,252,653,115" MouseDown="Mouse_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/мышь.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
+            <Image x:Name="Monitor" Margin="261,85,418,261" MouseDown="Monitor_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/монитор.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="273,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="81" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мониторы">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="164,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Столы">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Мыши">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="150,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="91" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Клавиатуры">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
+            <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="301,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="26" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="ПК">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF7059FC" Offset="0"/>
+                        <GradientStop Color="#FF45171A" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background></TextBlock>
         </Grid>
-        <DataGrid x:Name="T_RW1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,67,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
+        <DataGrid x:Name="T_RW3" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="436,67,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF4C223F" Offset="0.921"/>
-
                     <GradientStop Color="#FF6C53E6" Offset="0.052"/>
                     <GradientStop Color="#FF6D53E8"/>
                     <GradientStop Color="#FF522B5F" Offset="0.855"/>
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding User_ID}" Header="Название" Width="*" >
-                    <DataGridTextColumn.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FF050202" Offset="0"/>
-                            <GradientStop Color="#FF672727" Offset="1"/>
-                            <GradientStop Color="#FF451A1A" Offset="0.5"/>
-                        </LinearGradientBrush>
-                    </DataGridTextColumn.Foreground>
-                </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Номер" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
+                <DataGridTextColumn Binding="{Binding InventName.Name}" Header="Название" Width="*" />
+                <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

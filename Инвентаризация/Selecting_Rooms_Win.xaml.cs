@@ -20,10 +20,6 @@ namespace Инвентаризация
         {
             InitializeComponent();
         }
-        private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
 
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {

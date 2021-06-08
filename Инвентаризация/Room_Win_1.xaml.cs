@@ -57,5 +57,35 @@ namespace Инвентаризация
             win.Show();
             Close();
         }
+        private void Table_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 1).ToList();
+        }
+        private void Chair_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 2).ToList();
+        }
+        private void Monitor_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 3).ToList();
+        }
+        private void PC_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 4).ToList();
+        }
+        private void Keyboard_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 5).ToList();
+        }
+        private void Mouse_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            InventarizationEntities db = new InventarizationEntities();
+            T_RW1.ItemsSource = db.InventFirstRooms.Where(i => i.Name == 6).ToList();
+        }
     }
 }

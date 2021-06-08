@@ -82,9 +82,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown"/>
-        <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-            <Image x:Name="Mouse" Margin="28,238,659,108" MouseDown="ExitButton_MouseDown">
+        <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
+            <Image x:Name="Mouse" Margin="28,238,659,118" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/мышь.png"/>
@@ -94,25 +93,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="Back_RW2" Margin="18,0,736,415" MouseDown="Back_Button_MouseDown" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-                <Image.Style>
-                    <Style TargetType="{x:Type Image}">
-                        <Setter Property="Source" Value="Source/назад меньше.png"/>
-                    </Style>
-                </Image.Style>
-                <Image.Effect>
-                    <DropShadowEffect/>
-                </Image.Effect>
-            </Image>
-            <Image x:Name="Monitor" Margin="261,84,426,262" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="Monitor" Margin="261,84,426,272" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/монитор.png"/>
@@ -122,7 +103,7 @@
                     <BlurEffect Radius="1"/>
                 </Image.Effect>
             </Image>
-            <Image x:Name="PC" Margin="261,238,426,108" MouseDown="ExitButton_MouseDown">
+            <Image x:Name="PC" Margin="261,238,426,118" MouseDown="ExitButton_MouseDown">
                 <Image.Style>
                     <Style TargetType="{x:Type Image}">
                         <Setter Property="Source" Value="Source/пк.png"/>
@@ -150,7 +131,7 @@
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
                                     <Border x:Name="border" BorderThickness="0" CornerRadius="10" BorderBrush="Black"
-                                    Background="{TemplateBinding Background}">
+                                        Background="{TemplateBinding Background}">
                                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Border>
                                     <ControlTemplate.Triggers>
@@ -172,6 +153,49 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Image x:Name="MinButton" Margin="651,0,88,402" MouseDown="MinButton_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/88.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
+            <Image x:Name="ExitButton" Margin="721,0,10,402" MouseDown="ExitButton_MouseDown">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/99.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <BlurEffect Radius="1"/>
+                </Image.Effect>
+            </Image>
+            <DataGrid x:Name="T_RW2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="419,61,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
+                <DataGrid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4C223F" Offset="0.921"/>
+                        <GradientStop Color="#FF6C53E6" Offset="0.052"/>
+                        <GradientStop Color="#FF6D53E8"/>
+                        <GradientStop Color="#FF522B5F" Offset="0.855"/>
+                    </LinearGradientBrush>
+                </DataGrid.Background>
+                <DataGrid.Columns  >
+                    <DataGridTextColumn Binding="{Binding User_ID}" Header="Название" Width="*" >
+                        <DataGridTextColumn.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF050202" Offset="0"/>
+                                <GradientStop Color="#FF672727" Offset="1"/>
+                                <GradientStop Color="#FF451A1A" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </DataGridTextColumn.Foreground>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Login}" Header="Номер" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
             <TextBlock Foreground="White" HorizontalAlignment="Left" Margin="49,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="56" FontWeight="Bold" FontFamily="Simplex" FontStyle="Italic" Text="Стулья">
                 <TextBlock.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -214,51 +238,27 @@
                         <GradientStop Color="#FF45171A" Offset="1"/>
                     </LinearGradientBrush>
                 </TextBlock.Background></TextBlock>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,383" Width="93">
-                <Image x:Name="MinButton" Width="38" Margin="3,0,3,19" MouseDown="MinButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/88.png"/>
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-                <Image x:Name="ExitButton" Width="43" Margin="3,0,3,19" MouseDown="ExitButton_MouseDown">
-                    <Image.Style>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Source" Value="Source/99.png"/>
-                        </Style>
-                    </Image.Style>
-                    <Image.Effect>
-                        <BlurEffect Radius="1"/>
-                    </Image.Effect>
-                </Image>
-            </StackPanel>
-            <DataGrid x:Name="T_RW2" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="297" Margin="419,61,0,0" VerticalAlignment="Top" Width="346"  Foreground="Black" >
-                <DataGrid.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF4C223F" Offset="0.921"/>
-                        <GradientStop Color="#FF6C53E6" Offset="0.052"/>
-                        <GradientStop Color="#FF6D53E8"/>
-                        <GradientStop Color="#FF522B5F" Offset="0.855"/>
-                    </LinearGradientBrush>
-                </DataGrid.Background>
-                <DataGrid.Columns  >
-                    <DataGridTextColumn Binding="{Binding User_ID}" Header="Название" Width="*" >
-                        <DataGridTextColumn.Foreground>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FF050202" Offset="0"/>
-                                <GradientStop Color="#FF672727" Offset="1"/>
-                                <GradientStop Color="#FF451A1A" Offset="0.5"/>
-                            </LinearGradientBrush>
-                        </DataGridTextColumn.Foreground>
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Login}" Header="Номер" Width="*"/>
-                    <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Image x:Name="Back_RW2" Margin="18,0,736,382" MouseDown="Back_Button_MouseDown" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="Source/назад меньше.png"/>
+                    </Style>
+                </Image.Style>
+                <Image.Effect>
+                    <DropShadowEffect/>
+                </Image.Effect>
+            </Image>
+        </Grid>
+        <Grid x:Name="ToolBar_Copy" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown" Margin="69,10,147,399" RenderTransformOrigin="0.5,0.5">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,383" Width="93"/>
         </Grid>
         <Image x:Name="Table" Margin="10,85,641,261" MouseDown="ExitButton_MouseDown">
             <Image.Style>
