@@ -77,7 +77,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TabControl Height="460" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="TabablzControl_SelectionChanged" Margin="2,-12,-2,0" RenderTransformOrigin="0.5,0.5">
+        <TabControl Height="460" Width="800" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,2,-1,-12" RenderTransformOrigin="0.5,0.5">
             <TabItem Header="1 кабинет" Background="#FF7058F9">
                 <Grid Margin="-11,-2,-2,-3">
                     <Grid.Background>
@@ -622,17 +622,8 @@
                             </LinearGradientBrush>
                         </DataGrid.Background>
                         <DataGrid.Columns  >
-                            <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" Width="*" >
-                                <DataGridTextColumn.Foreground>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="#FF050202" Offset="0"/>
-                                        <GradientStop Color="#FF672727" Offset="1"/>
-                                        <GradientStop Color="#FF451A1A" Offset="0.5"/>
-                                    </LinearGradientBrush>
-                                </DataGridTextColumn.Foreground>
-                            </DataGridTextColumn>
-                            <DataGridTextColumn Binding="{Binding InventNumber}" Header="Номер" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Login}" Header="Логин" Width="*" />
+                            <DataGridTextColumn Binding="{Binding Password}" Header="Пароль" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="tb_Login_Us" Style="{StaticResource TB}" Margin="76,96,599,0" VerticalAlignment="Top" Height="34"    />
@@ -782,11 +773,8 @@
                                 <GradientStop Color="#FF522B5F" Offset="0.855"/>
                             </LinearGradientBrush>
                         </DataGrid.Background>
-                        <DataGrid.Columns  >
-                            <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" Width="*" >
-                                
-                            </DataGridTextColumn>
-                            
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="Наименование" Width="*" />
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="tb_Name_It" Style="{StaticResource TB}" Margin="76,96,599,0" VerticalAlignment="Top" Height="34"    />
@@ -906,7 +894,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Image x:Name="Back_Button" Margin="666,10,94,395" MouseDown="Back_Button_MouseDown">
+        <Image x:Name="Back_Button" Margin="665,24,95,381" MouseDown="Back_Button_MouseDown">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Source" Value="Source/назад меньше.png"/>

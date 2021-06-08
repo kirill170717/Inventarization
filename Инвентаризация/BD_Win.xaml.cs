@@ -25,6 +25,9 @@ namespace Инвентаризация
             T_RW_3.ItemsSource = db.InventThirdRooms.ToList();
             T_RW_Us.ItemsSource = db.Invent_Users.ToList();
             T_RW_It.ItemsSource = db.InventNames.ToList();
+            cb_Name1.ItemsSource = db.InventNames.ToList();
+            cb_Name2.ItemsSource = db.InventNames.ToList();
+            cb_Name3.ItemsSource = db.InventNames.ToList();
         }
         private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -60,8 +63,8 @@ namespace Инвентаризация
             InventFirstRoom fr = new InventFirstRoom();
 
             fr.Name = Convert.ToInt32(cb_Name1);
-            fr.InventNumber = tb_Num1.ToString();
-            fr.Date = Convert.ToDateTime(tb_Date1);
+            fr.InventNumber = tb_Num1.Text.ToString();
+            fr.Date = Convert.ToDateTime(tb_Date1.Text);
             db.InventFirstRooms.Add(fr);
             db.SaveChanges();
             T_RW_1.ItemsSource = db.InventFirstRooms.ToList();
@@ -71,8 +74,8 @@ namespace Инвентаризация
             InventarizationEntities db = new InventarizationEntities();
             InventSecondRoom sr = new InventSecondRoom();
             sr.Name = Convert.ToInt32(cb_Name2);
-            sr.InventNumber = tb_Num2.ToString();
-            sr.Date = Convert.ToDateTime(tb_Date2);
+            sr.InventNumber = tb_Num2.Text.ToString();
+            sr.Date = Convert.ToDateTime(tb_Date2.Text);
             db.InventSecondRooms.Add(sr);
             db.SaveChanges();
             T_RW_2.ItemsSource = db.InventSecondRooms.ToList();
@@ -82,8 +85,8 @@ namespace Инвентаризация
             InventarizationEntities db = new InventarizationEntities();
             InventThirdRoom tr = new InventThirdRoom();
             tr.Name = Convert.ToInt32(cb_Name3);
-            tr.InventNumber = tb_Num3.ToString();
-            tr.Date = Convert.ToDateTime(tb_Date3);
+            tr.InventNumber = tb_Num3.Text.ToString();
+            tr.Date = Convert.ToDateTime(tb_Date3.Text);
             db.InventThirdRooms.Add(tr);
             db.SaveChanges();
             T_RW_3.ItemsSource = db.InventThirdRooms.ToList();
@@ -92,8 +95,8 @@ namespace Инвентаризация
         {
             InventarizationEntities db = new InventarizationEntities();
             Invent_Users iu = new Invent_Users();
-            iu.Login = tb_Login_Us.ToString();
-            iu.Password = tb_Pass_Us.ToString();
+            iu.Login = tb_Login_Us.Text.ToString();
+            iu.Password = tb_Pass_Us.Text.ToString();
             db.Invent_Users.Add(iu);
             db.SaveChanges();
             T_RW_Us.ItemsSource = db.Invent_Users.ToList();
@@ -102,7 +105,7 @@ namespace Инвентаризация
         {
             InventarizationEntities db = new InventarizationEntities();
             InventName ina = new InventName();
-            ina.Name = tb_Name_It.ToString();
+            ina.Name = tb_Name_It.Text.ToString();
             db.InventNames.Add(ina);
             db.SaveChanges();
             T_RW_It.ItemsSource = db.InventNames.ToList();
@@ -137,7 +140,7 @@ namespace Инвентаризация
         private void Button_DelUs_Click(object sender, RoutedEventArgs e)
         {
             InventarizationEntities db = new InventarizationEntities();
-            var dRow = db.Invent_Users.FirstOrDefault(i => i.Login == tb_Login_Us.ToString());
+            var dRow = db.Invent_Users.FirstOrDefault(i => i.Login == tb_Login_Us.Text.ToString());
             db.Invent_Users.Remove(dRow);
             db.SaveChanges();
             T_RW_Us.ItemsSource = db.Invent_Users.ToList();
@@ -145,7 +148,7 @@ namespace Инвентаризация
         private void Button_DelIt_Click(object sender, RoutedEventArgs e)
         {
             InventarizationEntities db = new InventarizationEntities();
-            var dRow = db.InventNames.FirstOrDefault(i => i.Name == tb_Name_It.ToString());
+            var dRow = db.InventNames.FirstOrDefault(i => i.Name == tb_Name_It.Text.ToString());
             db.InventNames.Remove(dRow);
             db.SaveChanges();
             T_RW_It.ItemsSource = db.InventNames.ToList();
