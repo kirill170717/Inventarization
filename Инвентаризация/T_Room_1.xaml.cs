@@ -24,7 +24,6 @@ namespace Инвентаризация
             T_Room_1a.ItemsSource = db.InventFirstRooms.ToList();
             cb_Name.ItemsSource = db.InventNames.ToList();
         }
-
         private void Button_Ins_Click(object sender, RoutedEventArgs e)
         {
             InventarizationEntities db = new InventarizationEntities();
@@ -38,7 +37,6 @@ namespace Инвентаризация
             db.SaveChanges();
             T_Room_1a.ItemsSource = db.InventFirstRooms.ToList();
         }
-
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -50,12 +48,10 @@ namespace Инвентаризация
         {
             Close();
         }
-
         private void MinButton_MouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
-
         private void ToolBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -63,7 +59,6 @@ namespace Инвентаризация
                 DragMove();
             }
         }
-
         private void Button_Del_Click(object sender, RoutedEventArgs e)
         {
             InventarizationEntities db = new InventarizationEntities();
@@ -72,7 +67,6 @@ namespace Инвентаризация
             db.SaveChanges();
             T_Room_1a.ItemsSource = db.InventFirstRooms.ToList();
         }
-
         private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Room_Win_1 rw = new Room_Win_1();
