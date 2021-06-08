@@ -78,7 +78,7 @@
     </Window.Resources>
     <Grid>
         <Grid Name="ToolBar" Background="Transparent" Grid.Row="0" MouseDown="ToolBar_MouseDown">
-           
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,399">
                 <Image x:Name="MinButton" Width="38" Margin="3,10,3,-8" MouseDown="MinButton_MouseDown">
                     <Image.Style>
@@ -115,7 +115,7 @@
                     </LinearGradientBrush>
                 </DataGrid.Background>
                 <DataGrid.Columns  >
-                    <DataGridTextColumn Binding="{Binding User_ID}" Header="Наименование" Width="*" >
+                    <DataGridTextColumn Binding="{Binding InventName.Name}" Header="Наименование" Width="*" >
                         <DataGridTextColumn.Foreground>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF050202" Offset="0"/>
@@ -124,8 +124,8 @@
                             </LinearGradientBrush>
                         </DataGridTextColumn.Foreground>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Login}" Header="Инв. Номер" Width="*"/>
-                    <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding InventNumber}" Header="Инв. Номер" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
 
 
 
@@ -249,7 +249,6 @@
                     </Style>
                 </TextBlock.Style>
             </TextBlock>
-            <TextBox x:Name="tb_Name" Style="{StaticResource TB}" Margin="98,111,582,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
                 Margin="109,123,582,0" VerticalAlignment="Top" Foreground="White" Height="23">
                 <TextBlock.Style>
@@ -275,5 +274,19 @@
                 </Image.Effect>
             </Image>
         </Grid>
+        <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
+            Margin="101,127,590,0" VerticalAlignment="Top" Foreground="White" Height="23">
+            <TextBlock.Style>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Text, ElementName=cb_Name}" Value="">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <ComboBox x:Name="cb_Name" HorizontalAlignment="Left" Margin="101,127,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Name"/>
     </Grid>
 </Window>

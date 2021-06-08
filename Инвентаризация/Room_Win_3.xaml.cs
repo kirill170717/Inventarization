@@ -14,21 +14,12 @@ using System.Windows.Shapes;
 
 namespace Инвентаризация
 {
-    /// <summary>
-    /// Логика взаимодействия для Room_Win_3.xaml
-    /// </summary>
+
     public partial class Room_Win_3 : Window
     {
         public Room_Win_3()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-
-
         }
 
         private void Logo_MouseDown(object sender, MouseButtonEventArgs e)
@@ -56,11 +47,6 @@ namespace Инвентаризация
             }
         }
 
-        private void Button_Auth_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Redact_Click(object sender, RoutedEventArgs e)
         {
             T_Room_3 t_Room_3 = new T_Room_3();
@@ -69,7 +55,9 @@ namespace Инвентаризация
 
         private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            Selecting_Rooms_Win win = new Selecting_Rooms_Win();
+            win.Show();
+            Close();
         }
     }
 }

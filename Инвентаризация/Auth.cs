@@ -38,7 +38,7 @@ namespace Инвентаризация
                         selecting_Rooms_Win.Show();
                         return true;
                     }
-                    else if (invent_Users.Login == "Director")
+                    else if (invent_Users.Login == "Rinne")
                     {
                         role = 2;
                         selecting_Rooms_Win.Show();

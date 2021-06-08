@@ -53,7 +53,9 @@ namespace Инвентаризация
 
         private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            Selecting_Rooms_Win win = new Selecting_Rooms_Win();
+            win.Show();
+            Close();
         }
     }
 }

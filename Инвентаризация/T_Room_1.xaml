@@ -178,14 +178,13 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <TextBox x:Name="tb_Name" Style="{StaticResource TB}" Margin="119,117,561,0" VerticalAlignment="Top"    />
             <TextBlock IsHitTestVisible="False" FontSize="14" Text="Наименование"
-                Margin="130,129,561,0" VerticalAlignment="Top" Foreground="White" Height="23">
+                Margin="119,131,572,0" VerticalAlignment="Top" Foreground="White" Height="23">
                 <TextBlock.Style>
                     <Style TargetType="{x:Type TextBlock}">
                         <Setter Property="Visibility" Value="Collapsed"/>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Text, ElementName=tb_Name}" Value="">
+                            <DataTrigger Binding="{Binding Text, ElementName=cb_Name}" Value="">
                                 <Setter Property="Visibility" Value="Visible"/>
                             </DataTrigger>
                         </Style.Triggers>
@@ -230,6 +229,7 @@
                     <DropShadowEffect/>
                 </Image.Effect>
             </Image>
+            <ComboBox Name="cb_Name" HorizontalAlignment="Left" Margin="119,131,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Name"/>
         </Grid>
         <DataGrid x:Name="T_Room_1a" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="286" Margin="272,111,0,0" VerticalAlignment="Top" Width="480"  Foreground="Black" >
             <DataGrid.Background>
@@ -241,7 +241,7 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
             <DataGrid.Columns  >
-                <DataGridTextColumn Binding="{Binding User_ID}" Header="Наименование" Width="*" >
+                <DataGridTextColumn Binding="{Binding InventName.Name}" Header="Наименование" Width="*" >
                     <DataGridTextColumn.Foreground>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF050202" Offset="0"/>
@@ -250,8 +250,8 @@
                         </LinearGradientBrush>
                     </DataGridTextColumn.Foreground>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Login}" Header="Инв. Номер" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Password}" Header="Дата" Width="*"/>
+                <DataGridTextColumn Binding="{Binding InventNumber}" Header="Инв. Номер" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Дата" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
