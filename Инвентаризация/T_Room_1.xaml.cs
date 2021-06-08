@@ -70,6 +70,7 @@ namespace Инвентаризация
             var dRow = db.InventFirstRooms.FirstOrDefault(i => i.Name == Convert.ToInt32(cb_Name));
             db.InventFirstRooms.Remove(dRow);
             db.SaveChanges();
+            T_Room_1a.ItemsSource = db.InventFirstRooms.ToList();
         }
 
         private void Back_Button_MouseDown(object sender, MouseButtonEventArgs e)
